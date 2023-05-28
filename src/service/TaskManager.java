@@ -171,4 +171,15 @@ public class TaskManager {
         }
     }
 
+    public boolean checkById (int idTask) {
+        boolean answer = false;
+        if (epics.containsKey(idTask) ) {
+            answer = true;
+        } else if (subtasks.containsKey(idTask) ) {
+            answer = true;
+        } else if (tasks.containsKey(idTask)) {
+            answer = true;
+        }
+        return answer;
+    }
 }
