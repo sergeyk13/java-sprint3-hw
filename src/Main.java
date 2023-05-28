@@ -24,6 +24,7 @@ public class Main {
         task6 = taskManager.createEpic(task6);
         Task task7 = new Task(1, "subtask1", "description subtask1", TaskStatus.NEW);
         task7 = taskManager.createSubtask(task7, task6.getId());
+
         taskManager.associateSubtaskToEpic();// Связываю эпики с подзадачами т. к. пока не создали
 
         System.out.println();
